@@ -18,13 +18,14 @@
         <div class="top">
           <div class="search-container">
             <h2 class="title">Search for Books</h2>
-            <form id="formSearch" action="" method="post">
+            <form id="formSearch" action="" method="post" data-testid="searchBookForm">
               <div class="form-group">
                 <input
                   type="text"
                   name="searching"
                   id="searching"
                   placeholder="Search for Books"
+                  data-testid="searchBookFormTitleInput"
                 />
               </div>
               <div class="form-search-bottom">
@@ -120,6 +121,7 @@
                   type="text"
                   name="title"
                   id="title"
+                  data-testid="bookFormTitleInput"
                   placeholder="title"
                 />
               </div>
@@ -129,6 +131,7 @@
                     type="text"
                     name="writer"
                     id="writer"
+                    data-testid="bookFormAuthorInput"
                     placeholder="author"
                   />
                 </div>
@@ -137,15 +140,16 @@
                     type="number"
                     name="year"
                     id="year"
+                    data-testid="bookFormYearInput"
                     placeholder="year"
                   />
                 </div>
               </div>
               <div class="form-check">
-                <input type="checkbox" name="isRead" id="isRead" />
+                <input type="checkbox" name="isRead" id="isRead" data-testid="bookFormIsCompleteCheckbox"/>
                 <label for="isRead">Finished Reading</label>
               </div>
-              <button type="submit" class="submit-btn">Save</button>
+              <button type="submit" class="submit-btn" data-testid="bookFormSubmitButton">Save</button>
             </form>
           </div>
         </div>
@@ -153,11 +157,11 @@
         <div class="bottom">
           <div class="left-container">
             <h2 class="title">Read Book</h2>
-            <div id="alreadyRead"></div>
+            <div id="alreadyRead" data-testid="completeBookList"></div>
           </div>
           <div class="right-container">
             <h2 class="title">Unread Books</h2>
-            <div id="notRead"></div>
+            <div id="notRead" data-testid="incompleteBookList"></div>
           </div>
         </div>
       </div>
